@@ -5,6 +5,20 @@
 	font-family: 'Merriweather', serif;
 }
 
+p {
+	color: #40514e;
+	font-weight: normal;
+}
+
+hr {
+	width: 5%;
+	border-style: dotted;
+	border-width: 0.4rem;
+	border-bottom: 0;
+	color: gainsboro;
+	margin: 2em auto 5em;
+}
+
 /* Main Page */
 
 body {
@@ -66,6 +80,21 @@ a {
 	color: #11999e;
 }
 
+/* Profile */
+
+.profile h2 {
+	line-height: 2;
+}
+
+.profile img {
+	margin: 4rem 0 2rem 0;
+}
+
+.profile p {
+	width: 30%;
+	margin: 2em auto 5em auto;
+}
+
 /* Skills */
 
 .middle-container {
@@ -98,4 +127,43 @@ a {
 .skill-row .skill-image-two {
 	float: right;
 	margin-left: 20px;
+}
+
+/* Contact Me */
+.contact-me h3,
+.contact-me p {
+	padding-top: 2%;
+	width: 30%;
+	margin: auto;
+}
+
+.contact-me .btn {
+	line-height: 5;
+	background-color: #11999e;
+	border-radius: 10%;
+	color: white;
+	display: inline-block;
+	padding: 0 1rem;
+	margin: 2em auto 5rem;
+	text-decoration: none;
+	font-weight: bold;
+}
+/* Bottom Container */
+
+.bottom-container {
+	background-color: #66bfbf;
+}
+
+.bottom-container a {
+	display: inline-block;
+	color: #11999e;
+	padding: 0 2em;
+	margin-top: 2em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.bottom-container p {
+	color: white;
+	padding: 3em;
 }
