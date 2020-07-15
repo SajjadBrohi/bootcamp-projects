@@ -1,8 +1,11 @@
+/* Style on entire website */
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Merriweather', serif;
 }
+
+/* Main Page */
 
 body {
 	text-align: center;
@@ -37,12 +40,12 @@ body {
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
-	line-height: 2;
 }
 
 .background h2 {
-	margin: 0 auto 3rem;
+	margin: 0 auto 7.5rem;
 	font-weight: normal;
+	line-height: 1.5;
 }
 
 h1 {
@@ -61,4 +64,38 @@ h3,
 a {
 	font-family: 'Montserrat', sans-serif;
 	color: #11999e;
+}
+
+/* Skills */
+
+.middle-container {
+	text-align: center;
+}
+
+.skill-row {
+	margin: 100px auto;
+	text-align: left;
+	width: 50%;
+}
+
+.skill-row h3 {
+	padding: 1.5em 0;
+}
+
+.skill-row p {
+	line-height: 2;
+}
+
+.skill-row img {
+	width: 25%;
+}
+
+.skill-row .skill-image-one {
+	float: left;
+	margin-right: 20px;
+}
+
+.skill-row .skill-image-two {
+	float: right;
+	margin-left: 20px;
 }
