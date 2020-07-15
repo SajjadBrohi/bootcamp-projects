@@ -1,13 +1,17 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Merriweather', serif;
+}
+
+body {
+	text-align: center;
 }
 
 .background {
 	background-color: #eaf6f6;
 	padding-top: 100px;
 	position: relative;
-	text-align: center;
 	height: 86vh;
 }
 
@@ -28,12 +32,20 @@
 
 .mountain {
 	position: relative;
-	top: 243px;
+	top: 26.5vh;
 }
 
-h1,
-p {
+.main-text {
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'Sacramento', cursive;
+}
+
+h2,
+h3 {
+	font-family: 'Montserrat', sans-serif;
 }
