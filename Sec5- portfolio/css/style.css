@@ -12,7 +12,6 @@ body {
 	background-color: #eaf6f6;
 	padding-top: 100px;
 	position: relative;
-	height: 86vh;
 }
 
 .pro {
@@ -32,20 +31,34 @@ body {
 
 .mountain {
 	position: relative;
-	top: 26.5vh;
 }
 
 .main-text {
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
+	line-height: 2;
+}
+
+.background h2 {
+	margin: 0 auto 3rem;
+	font-weight: normal;
 }
 
 h1 {
 	font-family: 'Sacramento', cursive;
+	font-size: 5.7rem;
+	color: #66bfbf;
 }
 
-h2,
-h3 {
+h2 {
 	font-family: 'Montserrat', sans-serif;
+	font-size: 2.5rem;
+	color: #66bfbf;
+}
+
+h3,
+a {
+	font-family: 'Montserrat', sans-serif;
+	color: #11999e;
 }
