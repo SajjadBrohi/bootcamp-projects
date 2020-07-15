@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+	background-color: #eaf6f6;
+	padding-top: 100px;
+	position: relative;
+	text-align: center;
+	height: 86vh;
+}
+
+.pro {
+	text-decoration: underline;
+}
+
+.cloud-one {
+	position: absolute;
+	right: 250px;
+}
+
+.cloud-two {
+	position: absolute;
+	bottom: 350px;
+	left: 350px;
+}
+
+.mountain {
+	position: relative;
+	top: 243px;
+}
+
+h1,
+p {
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+}
