@@ -88,6 +88,9 @@ a {
 
 .profile img {
 	margin: 4rem 0 2rem 0;
+	height: 300px;
+	border-radius: 50%;
+	width: 300px;
 }
 
 .profile p {
