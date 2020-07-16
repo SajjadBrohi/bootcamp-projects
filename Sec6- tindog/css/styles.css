@@ -68,6 +68,7 @@ body {
 #features i {
 	color: #ef8172;
 	font-size: 70px;
+	margin-bottom: 1rem;
 }
 
 #features i:hover {
