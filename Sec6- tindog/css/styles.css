@@ -42,3 +42,32 @@ body {
 .col-lg-6 .btn {
 	margin-right: 1rem;
 }
+
+/* Features Section */
+
+#features {
+	text-align: center;
+}
+
+#features div {
+	width: 15rem;
+}
+
+#features i {
+	color: #ef8172;
+	width: 200px;
+}
+
+#features i:hover {
+	color: #ff4c68;
+}
+
+#features h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	font-size: 1.5rem;
+}
+
+#features p {
+	color: #8f8f8f;
+}
