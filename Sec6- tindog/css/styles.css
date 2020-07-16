@@ -25,6 +25,9 @@ body {
 	padding: 0 0 10vh;
 }
 
+.row {
+	height: 30rem;
+}
 .row h1 {
 	color: white;
 	font-family: 'Montserrat', sans-serif;
@@ -35,8 +38,11 @@ body {
 }
 
 .col-lg-6 img {
+	position: relative;
+	/* top: 5rem; */
 	transform: rotate(30deg);
 	width: 60%;
+	z-index: 0;
 }
 
 .col-lg-6 .btn {
@@ -46,16 +52,22 @@ body {
 /* Features Section */
 
 #features {
+	background-color: white;
+	position: relative;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 	text-align: center;
+	z-index: 15;
 }
 
 #features div {
 	width: 15rem;
+	margin: 0 auto;
 }
 
 #features i {
 	color: #ef8172;
-	width: 200px;
+	font-size: 70px;
 }
 
 #features i:hover {
