@@ -132,6 +132,8 @@ p {
 #cta {
 	background-color: #ff4c68;
 	text-align: center;
+	padding-left: 22rem;
+	padding-right: 22rem;
 }
 
 #cta h3 {
