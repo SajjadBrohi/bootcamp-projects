@@ -2,6 +2,18 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+	font-weight: 900;
+}
+
+h3 {
+	font-weight: 700;
+}
+
+p {
+	color: #8f8f8f;
+}
+
 #title {
 	background-color: #ff4c68;
 }
@@ -13,7 +25,6 @@ body {
 .navbar-brand {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 2.5rem;
-	/* background-color: rebeccapurple; */
 }
 
 .nav-item {
@@ -39,7 +50,6 @@ body {
 
 .col-lg-6 img {
 	position: relative;
-	/* top: 5rem; */
 	transform: rotate(30deg);
 	width: 60%;
 	z-index: 0;
@@ -75,12 +85,62 @@ body {
 	color: #ff4c68;
 }
 
-#features h3 {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 900;
-	font-size: 1.5rem;
+/* Testimonials Section */
+
+#testimonials {
+	background-color: #ef8172;
+	color: white;
+	text-align: center;
 }
 
-#features p {
-	color: #8f8f8f;
+#testimonials img {
+	border-radius: 100%;
+	margin: 1.5rem;
+	width: 120px;
+}
+
+.carousel-item {
+	padding: 8rem 23rem 2.5rem;
+}
+
+#press {
+	background-color: #ef8172;
+	text-align: center;
+	padding-bottom: 6rem;
+}
+
+#press img {
+	width: 15%;
+	margin: 0 2rem;
+}
+
+/* Pricing Section */
+
+#pricing {
+	text-align: center;
+	margin-bottom: 10rem;
+}
+
+#pricing .col-12 {
+	margin-bottom: 20px;
+}
+
+#pricing .col-md-6 p:last-of-type {
+	padding-bottom: 41px;
+}
+
+/* Mobile Site */
+
+@media screen and (max-width: 990px) {
+	#title {
+		text-align: center;
+		padding-bottom: 25rem;
+	}
+
+	.col-lg-6 img {
+		padding-top: 40px;
+		position: static;
+		transform: rotate(0);
+		/* width: 20%; */
+	}
 }
