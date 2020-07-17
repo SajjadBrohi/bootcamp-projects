@@ -109,18 +109,14 @@ p {
 }
 
 #press img {
-	width: 15%;
 	margin: 0 2rem;
+	width: 15%;
 }
 
 /* Pricing Section */
 
 #pricing {
-	margin-bottom: 10rem;
-}
-
-#pricing .col-12 {
-	margin-bottom: 20px;
+	margin-bottom: 3rem;
 }
 
 #pricing .col-md-6 p:last-of-type {
@@ -155,14 +151,42 @@ p {
 /* Mobile Site */
 
 @media screen and (max-width: 990px) {
-	#title {
+	/* Title Section */
+
+	#title .row {
 		text-align: center;
-		padding-bottom: 25rem;
+		padding-bottom: 55rem;
 	}
 
 	#title .col-lg-6 img {
 		padding-top: 40px;
 		position: static;
 		transform: rotate(0);
+		width: 40%;
+	}
+
+	/* Features Section */
+
+	#features div {
+		margin-top: 50px;
+	}
+
+	/* Testimonials Section */
+
+	#testimonials .carousel-item {
+		padding: 4rem 12rem 2.5rem;
+	}
+
+	/* Pricing Section */
+
+	#pricing .col-lg-4 {
+		margin-top: 5rem;
+	}
+
+	/* CTA Section */
+
+	#cta {
+		padding-left: 11rem;
+		padding-right: 11rem;
 	}
 }
