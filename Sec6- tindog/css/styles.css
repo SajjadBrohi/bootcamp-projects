@@ -52,7 +52,6 @@ p {
 	position: relative;
 	transform: rotate(30deg);
 	width: 60%;
-	z-index: 0;
 }
 
 .col-lg-6 .btn {
@@ -67,7 +66,6 @@ p {
 	padding-top: 10rem;
 	padding-bottom: 10rem;
 	text-align: center;
-	z-index: 15;
 }
 
 #features div {
@@ -129,6 +127,33 @@ p {
 	padding-bottom: 41px;
 }
 
+/* CTA */
+
+#cta {
+	background-color: #ff4c68;
+	text-align: center;
+}
+
+#cta h3 {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 900;
+	padding: 2rem;
+}
+
+#cta .btn {
+	margin: 0 1rem 3rem;
+}
+
+/* Footer */
+
+#footer {
+	text-align: center;
+}
+
+#footer i {
+	margin: 2rem 0.7rem;
+}
 /* Mobile Site */
 
 @media screen and (max-width: 990px) {
