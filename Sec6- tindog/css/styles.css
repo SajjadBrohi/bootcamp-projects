@@ -62,6 +62,7 @@ p {
 
 #features {
 	background-color: white;
+	display: inline-block;
 	position: relative;
 	padding-top: 10rem;
 	padding-bottom: 10rem;
@@ -115,8 +116,8 @@ p {
 /* Pricing Section */
 
 #pricing {
-	text-align: center;
 	margin-bottom: 10rem;
+	text-align: center;
 }
 
 #pricing .col-12 {
