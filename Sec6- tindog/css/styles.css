@@ -1,5 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 }
 
 h2 {
@@ -14,47 +15,50 @@ p {
 	color: #8f8f8f;
 }
 
-#title {
-	background-color: #ff4c68;
-}
-
 .container-fluid {
 	padding: 3% 15%;
 }
 
-.navbar-brand {
+/* Title Section */
+
+#title {
+	background-color: #ff4c68;
+}
+
+#title .navbar-brand {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 2.5rem;
 }
 
-.nav-item {
+#title .nav-item {
 	padding: 0 1rem;
 	font-size: larger;
 }
 
-.navbar {
+#title .navbar {
 	padding: 0 0 10vh;
 }
 
-.row {
+#title .row {
 	height: 30rem;
+	text-align: left;
 }
-.row h1 {
+
+#title .row h1 {
 	color: white;
-	font-family: 'Montserrat', sans-serif;
 	font-size: 3rem;
 	font-weight: 900;
 	line-height: 1.5;
 	margin-bottom: 3rem;
 }
 
-.col-lg-6 img {
+#title .col-lg-6 img {
 	position: relative;
 	transform: rotate(30deg);
 	width: 60%;
 }
 
-.col-lg-6 .btn {
+#title .col-lg-6 .btn {
 	margin-right: 1rem;
 }
 
@@ -62,11 +66,9 @@ p {
 
 #features {
 	background-color: white;
-	display: inline-block;
 	position: relative;
 	padding-top: 10rem;
 	padding-bottom: 10rem;
-	text-align: center;
 }
 
 #features div {
@@ -89,7 +91,6 @@ p {
 #testimonials {
 	background-color: #ef8172;
 	color: white;
-	text-align: center;
 }
 
 #testimonials img {
@@ -98,13 +99,12 @@ p {
 	width: 120px;
 }
 
-.carousel-item {
+#testimonials .carousel-item {
 	padding: 8rem 23rem 2.5rem;
 }
 
 #press {
 	background-color: #ef8172;
-	text-align: center;
 	padding-bottom: 6rem;
 }
 
@@ -117,7 +117,6 @@ p {
 
 #pricing {
 	margin-bottom: 10rem;
-	text-align: center;
 }
 
 #pricing .col-12 {
@@ -132,7 +131,6 @@ p {
 
 #cta {
 	background-color: #ff4c68;
-	text-align: center;
 	padding-left: 22rem;
 	padding-right: 22rem;
 }
@@ -150,13 +148,10 @@ p {
 
 /* Footer */
 
-#footer {
-	text-align: center;
-}
-
 #footer i {
 	margin: 2rem 0.7rem;
 }
+
 /* Mobile Site */
 
 @media screen and (max-width: 990px) {
@@ -165,10 +160,9 @@ p {
 		padding-bottom: 25rem;
 	}
 
-	.col-lg-6 img {
+	#title .col-lg-6 img {
 		padding-top: 40px;
 		position: static;
 		transform: rotate(0);
-		/* width: 20%; */
 	}
 }
