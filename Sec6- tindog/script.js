@@ -1,24 +1,16 @@
-function isLeap(year) {
-	/**************Don't change the code above****************/
+function fibonacciGenerator(n) {
+	//Do NOT change any of the code above 👆
+	const fibNumbers = [0, 1];
+	const fibLength = fibNumbers.length;
 
-	var leapYear = 'Not leap year.';
-	if (year % 4 === 0) {
-		if ((year % 100 = 0)) {
-			if ((year % 400 = 0)) {
-				leapYear = 'Leap year.';
-			} else {
-				leapYear = 'Not leap year.';
-			}
-		} else {
-			leapYear = 'Leap year.';
-		}
-	} else {
-		leapYear = 'Not leap year.';
+	while (fibLength < n) {
+		fibNumbers.push(fibNumbers[fibLength - 2] + fibNumbers[fibLength - 1]);
+		fibLength = fibNumbers.length;
 	}
 
-	return leapYear;
+	return fibNumbers;
 
-	/**************Don't change the code below****************/
+	//Return an array of fibonacci numbers starting from 0.
+
+	//Do NOT change any of the code below 👇
 }
-
-console.log(isLeap(1948));
