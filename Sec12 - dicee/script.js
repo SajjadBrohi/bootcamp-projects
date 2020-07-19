@@ -20,4 +20,7 @@ function gameOfDice() {
 		.setAttribute('src', 'images/dice' + playerTwoDiceNumber + '.png');
 }
 
-window.onbeforeunload = gameOfDice();
+// if the page has been refreshed, call the rollDice() function.
+if (window.performance.navigation.type === 1) {
+	gameOfDice();
+}
