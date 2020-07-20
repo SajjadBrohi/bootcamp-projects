@@ -40,8 +40,21 @@ function playSound(key) {
 	drum.play();
 }
 
+function animateDrum(drum) {
+	const drumClassList = document.querySelector('.' + drum).classList;
+
+	drumClassList.add('pressed');
+	setInterval(() => drumClassList.remove('pressed'), 100);
+}
+
 drumSet.forEach((drum) =>
 	drum.addEventListener('click', function () {
 		playSound(this.innerHTML);
+		animateDrum(this.innerHTML);
 	}),
 );
+
+document.addEventListener('keydown', function (event) {
+	playSound(event.key);
+	animateDrum(event.key);
+});
