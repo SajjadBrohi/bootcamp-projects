@@ -2,15 +2,20 @@ const levelTitle = $('#level-title');
 const buttons = $('.btn');
 const computerButtonsPressed = [];
 const playerButtonsPressed = [];
-let levelNumber = 1;
+let levelNumber = 0;
 
 console.log(buttons);
 
 function gameOver() {
-	$('body').addClass('.game-over');
-	setInterval(() => $('body').removeClass('.game-over'), 500);
+	$('body').addClass('game-over');
+	console.log($('body').attr('class'));
+
+	setTimeout(() => $('body').removeClass('game-over'), 100);
 	levelTitle.text('Game Over, Press Any Key to Restart');
-	levelNumber = 1;
+
+	const gameOverSound = new Audio('sounds/wrong.mp3');
+	gameOverSound.play();
+	levelNumber = 0;
 	computerButtonsPressed.length = 0;
 	playerButtonsPressed.length = 0;
 }
@@ -39,14 +44,9 @@ function getIndexOfColor(color) {
 	return indexNumber;
 }
 
-function checkClickedNumber(button) {
-	const buttonNumber = getIndexOfColor(button);
-	playerButtonsPressed.push(buttonNumber);
+function checkClickedNumber(buttonNumber) {
 	const indexOfCurrentButton = playerButtonsPressed.indexOf(buttonNumber);
-	return (
-		computerButtonsPressed[indexOfCurrentButton] === buttonNumber &&
-		computerButtonsPressed.length === playerButtonsPressed.length
-	);
+	return computerButtonsPressed[indexOfCurrentButton] === buttonNumber;
 }
 
 function buttonDisplayAndSOund(buttonNumber, classChange) {
@@ -68,23 +68,33 @@ function changeLevelTitle() {
 	levelTitle.text('Level ' + levelNumber);
 }
 
-function startGame() {
+function newRound() {
+	levelNumber++;
 	computerButtonPress();
 	changeLevelTitle();
 }
 
 $('body').on('keypress', () => {
-	startGame();
+	newRound();
 });
 
 buttons.on('click', (event) => {
 	const clickedElementColor = event.target.id;
 	buttonDisplayAndSOund(getIndexOfColor(clickedElementColor), 'pressed');
+	const buttonNumber = getIndexOfColor(clickedElementColor);
+	playerButtonsPressed.push(buttonNumber);
 
-	if (checkClickedNumber(clickedElementColor)) {
-		console.log('all elements clicked; new round');
-		startGame();
-	} else if (!checkClickedNumber(clickedElementColor)) {
+	if (checkClickedNumber(buttonNumber)) {
+		console.log('Good click');
+		console.log(computerButtonsPressed);
+		console.log(playerButtonsPressed);
+		if (computerButtonsPressed.length === playerButtonsPressed.length) {
+			playerButtonsPressed.length = 0;
+
+			console.log('New Round');
+			setTimeout(() => newRound(), 1000);
+		}
+	} else if (!checkClickedNumber(buttonNumber)) {
 		console.log(computerButtonsPressed);
 		console.log(playerButtonsPressed);
 		gameOver();
