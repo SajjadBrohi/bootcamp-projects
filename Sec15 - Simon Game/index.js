@@ -4,17 +4,15 @@ const computerButtonsPressed = [];
 const playerButtonsPressed = [];
 let levelNumber = 0;
 
-console.log(buttons);
-
 function gameOver() {
 	$('body').addClass('game-over');
-	console.log($('body').attr('class'));
-
 	setTimeout(() => $('body').removeClass('game-over'), 100);
 	levelTitle.text('Game Over, Press Any Key to Restart');
 
 	const gameOverSound = new Audio('sounds/wrong.mp3');
 	gameOverSound.play();
+
+	// Reset all variables
 	levelNumber = 0;
 	computerButtonsPressed.length = 0;
 	playerButtonsPressed.length = 0;
@@ -85,18 +83,11 @@ buttons.on('click', (event) => {
 	playerButtonsPressed.push(buttonNumber);
 
 	if (checkClickedNumber(buttonNumber)) {
-		console.log('Good click');
-		console.log(computerButtonsPressed);
-		console.log(playerButtonsPressed);
 		if (computerButtonsPressed.length === playerButtonsPressed.length) {
 			playerButtonsPressed.length = 0;
-
-			console.log('New Round');
 			setTimeout(() => newRound(), 1000);
 		}
 	} else if (!checkClickedNumber(buttonNumber)) {
-		console.log(computerButtonsPressed);
-		console.log(playerButtonsPressed);
 		gameOver();
 	}
 });
