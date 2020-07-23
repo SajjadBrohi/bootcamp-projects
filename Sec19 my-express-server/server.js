@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express();
-const port = 4200;
-
-app.get("/", function (req, res) {
-  res.send("hello man");
-})
-
-app.get("/contact", (req, res) => {
-  res.send("You can contact me whereever you want.");
-})
-
-app.get("/about", (req, res) => res.send("Elo, my name is Rey!"));
+// const bmiElement = document.querySelector(".bmi");
 
 
-app.listen(port, () => console.log(`hello`));
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+app.use(express.static('public'));
+
+app.get("/", (req, res) => res.sendFile(__dirname + "/bmiCalculator.html"));
+
+app.post("/", (req, res) => {
+  res.sendFile(__dirname + '/programming.jpg')
+});
+
+app.listen(4200, () => console.log("Server started at port 4200."));
