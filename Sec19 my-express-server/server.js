@@ -10,7 +10,7 @@ app.get("/contact", (req, res) => {
   res.send("You can contact me whereever you want.");
 })
 
-app.get("/about", (req, res) => res.send("Elo, my name is Jay!"));
+app.get("/about", (req, res) => res.send("Elo, my name is Rey!"));
 
 
 app.listen(port, () => console.log(`hello`));
