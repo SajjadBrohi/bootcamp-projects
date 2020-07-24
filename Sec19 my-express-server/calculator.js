@@ -6,6 +6,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 app.get("/about", (req, res) => res.send("please stop"));
 
+
+//Process data from calculator form
 app.post("/", (req, res) => {
 
   const num1 = parseInt(req.body.num1);
