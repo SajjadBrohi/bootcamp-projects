@@ -43,8 +43,17 @@ app.post('/', (req, res) => {
   }
 
   const request = https.request(url, option, (response) => {
+
     response.on("data", (data) => {
-      console.log(JSON.parse(data));
+      const errorCount = JSON.parse(data).error_count;
+
+      if (response.statusCode === 200 && errorCount === 0) {
+        res.sendFile(__dirname + '/success.html');
+      } else {
+        res.sendFile(__dirname + '/failure.html');
+
+      }
+
       // We log here to get the data response back from the server of Mailchimp to 
       // see everything worked well
     })
@@ -55,7 +64,10 @@ app.post('/', (req, res) => {
   request.end();
 
   // Data to send to the user
-  res.send("Well done!")
 });
+
+app.post('/failure', (req, res) => {
+  res.redirect('/');
+})
 
 app.listen(3000, () => console.log('Server running at port 3000'));
