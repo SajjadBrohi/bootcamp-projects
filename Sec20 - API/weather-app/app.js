@@ -11,18 +11,13 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const cityName = req.body.cityName;
-
-  console.log(cityName);
   const apiKey = "9f5922f82d0ba2ed132cc16c148b8caf"
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=metric";
+
   https.get(url, (response) => {
     // console.log(response.statusCode)
     response.on('data', (data) => {
       const weatherData = JSON.parse(data);
-
-      // console.log(weatherData);
-
-
       const temp = weatherData.main.temp;
       const tempDescription = weatherData.weather[0].description;
       const icon = weatherData.weather[0].icon;
