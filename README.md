@@ -14,3 +14,5 @@ By Angela Yu
 3. ExpressJS
 
 4. Bootstrap
+
+5. jQuery
