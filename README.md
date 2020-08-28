@@ -1,11 +1,11 @@
-# web-development-bootcamp-projects
+# Bootcamp Projects
 
-# Exercises from:
+## Exercises from:
 The complete web development bootcamp
 
 By Angela Yu
 
-# Uses
+## Uses
 
 1. Node.js
 
