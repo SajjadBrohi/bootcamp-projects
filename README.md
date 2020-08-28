@@ -5,13 +5,13 @@ The complete web development bootcamp
 
 By Angela Yu
 
-# Packages/Modules
+# Uses
 
-1. NodeJS
+1. Node.js
 
-2. HTTPS Module in NodeJS
+2. HTTPS Module (Node.js)
 
-3. ExpressJS
+3. Express.js
 
 4. Bootstrap
 
